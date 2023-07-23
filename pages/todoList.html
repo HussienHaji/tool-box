@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/todoList.css" />
+    <script src="../scripts/todoList.js"></script>
+    <!-- font awesomr -->
+    <link rel="stylesheet" href="../fontawesome/css/all.css" />
+  </head>
+  <body>
+    <div class="edit-container">
+      <i class="btn-close fas fa-times"></i>
+      <h2>Edit Todo</h2>
+      <div class="from-control">
+        <input type="text" class="edit-text" />
+        <button class="edit-btn">Edit <i class="btn fas fa-pen"></i></button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Todo List</h2>
+      <div class="top">
+        <input type="text" class="todo" />
+        <button class="btn btn-add">Add <i class="fas fa-plus"></i></button>
+      </div>
+      <ul class="todo-list"></ul>
+    </div>
+
+    <!-- script -->
+    <script src="../scripts/todoList.js"></script>
+  </body>
+</html>

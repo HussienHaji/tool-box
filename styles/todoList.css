@@ -1,0 +1,190 @@
+body {
+  background-color: #dde6ed;
+}
+h2 {
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 50rem;
+  background-color: #526d82;
+  padding: 2rem;
+  margin-top: 5rem;
+  border-radius: 0.8rem;
+  position: relative;
+  margin-top: -15rem;
+}
+
+.top {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.todo {
+  flex: 1;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  border-bottom: 0.3rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.todo:focus {
+  border-bottom: 0.3rem solid red;
+}
+
+.btn-add {
+  margin-left: -1rem;
+  width: 8rem;
+  border: none;
+  background-color: #dde6ed;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-add:active {
+  transform: scale(0.98);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.todo-item {
+  display: flex;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+.todo-item .text {
+  position: relative;
+  cursor: pointer;
+}
+
+.todo-item .text::after {
+  content: "";
+  position: absolute;
+  height: 0.3rem;
+  background-color: #f02521;
+  border-radius: 2rem;
+  left: 0;
+  top: 50%;
+  transition: width 0.2s ease-out;
+}
+
+.todo-item .text.active::after {
+  width: 100%;
+}
+
+.btn-delete {
+  color: #f02521;
+}
+
+.btn-edit {
+  color: #26d072;
+}
+
+.btn-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-container .btn-delete {
+  margin-right: 1rem;
+}
+
+.btn-container .btn {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.05s ease-in;
+}
+
+.btn-container .btn:hover {
+  transform: scale(1.1);
+}
+
+.btn-container .btn:active {
+  transform: scale(0.99);
+}
+
+.edit-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blred;
+  width: 50rem;
+  top: -30rem;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: #a5a5a5;
+  transition: top 0.5s ease-out;
+  z-index: 100;
+}
+
+.edit-container.active {
+  top: 20rem;
+}
+
+.edit-container h2 {
+  margin-bottom: 2rem;
+}
+
+.from-control {
+  display: flex;
+  align-items: center;
+}
+
+.edit-text {
+  flex: 1;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  border-bottom: 0.3rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.edit-btn {
+  margin-left: -1rem;
+  width: 8rem;
+  border: none;
+  background-color: #dde6ed;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 1.5rem 2rem;
+  width: 10rem;
+  text-align: center;
+}
+
+.edit-btn:active {
+  transform: scale(0.98);
+}
+
+.edit-btn i {
+  margin-left: 1rem;
+}
+
+.btn-close {
+  position: absolute;
+  font-size: 3rem;
+  top: 2rem;
+  right: 2rem;
+  color: #f02521;
+  cursor: pointer;
+}
+
+.btn-close:active {
+  transform: scale(0.98);
+}

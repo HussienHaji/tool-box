@@ -1,0 +1,53 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1e7eb;
+}
+
+.container  {
+  min-width: 30rem;
+  height: 50rem;
+  border-radius: 1rem;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  padding: 2rem;
+}
+
+.display{
+  width: 100%;
+  height: 5rem;
+  padding: 3rem 2rem;
+  font-size: 3rem;
+  text-align: right;
+  margin-bottom: 5rem;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.buttons button{
+  width: 5rem;
+  height: 5rem;
+  font-size: 2.2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  background-color: #e1e7eb;
+  transition: transform 0.2s ease;
+}
+
+.buttons button:active{
+  transform: scale(0.95);
+}
+
+.oprator{
+  color: rgb(59, 192, 233);
+}
