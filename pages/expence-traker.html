@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="../styles/expence-traker.css" />
+    <script src="../scripts/expence-traker.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+
+      <div class="form">
+        <div class="form-control">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" placeholder="Enter amount" />
+        </div>
+        <div class="radio-container">
+          <div class="form-control">
+            <label for="income">Income</label>
+            <input type="radio" id="income" name="type" checked />
+          </div>
+
+          <div class="form-control">
+            <label for="expense">Expense</label>
+            <input type="radio" id="expense" name="type" />
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="description">Description</label>
+          <input type="text" id="description" placeholder="Enter description" />
+        </div>
+
+        <button id="submit-btn">Add Transaction</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+
+      <div class="balance">
+        <h2>Balance:</h2>
+        <h3 id="balance-amount">$0.00</h3>
+      </div>
+
+      <div class="transactions">
+        <h2>Transactions:</h2>
+        <ul id="transactions-list"></ul>
+      </div>
+    </div>
+  </body>
+</html>
