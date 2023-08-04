@@ -1,13 +1,21 @@
-const btn = document.querySelector(".btn")
+const quoteText = document.getElementById("quote-text");
+const quoteAuthor = document.getElementById("quote-author");
+const newQuoteButton = document.getElementById("new-quote");
 
-function generateQuote() {
-    fetch('https://api.quotable.io/random')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('quote-text').textContent = data.content;
-      document.getElementById('quote-author').textContent = "- " + data.author;
-    })
-    .catch(error => console.log('Error:', error));
+async function getRandomQuote() {
+  const response = await fetch("https://type.fit/api/quotes");
+  const data = await response.json();
+  const randomIndex = Math.floor(Math.random() * data.length);
+  return data[randomIndex];
 }
 
-btn.addEventListener("click", generateQuote)
+function setQuote() {
+  getRandomQuote().then(data => {
+    quoteText.textContent = data.text;
+    quoteAuthor.textContent = "- " + data.author;
+  });
+}
+
+newQuoteButton.addEventListener("click", setQuote);
+
+setQuote();

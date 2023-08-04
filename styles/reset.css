@@ -14,3 +14,7 @@ html {
 body {
   min-height: 100vh;
 }
+a,a:active,a:visited{
+  text-decoration: none;
+  color: initial;
+}

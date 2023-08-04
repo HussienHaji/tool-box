@@ -1,0 +1,36 @@
+body {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem 5rem;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5rem;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tool {
+  margin: 3rem 2rem;
+  min-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tool img {
+  width: 20rem;
+  height: 10rem;
+  margin-bottom: 2rem;
+}
+
+.tool-name{
+  font-size: 2rem;
+  color: black;
+}
