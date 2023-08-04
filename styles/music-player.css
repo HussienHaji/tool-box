@@ -1,0 +1,130 @@
+/* CSS styles for the player */
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.player {
+  margin-top: 100px;
+}
+
+.cover {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cover img {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.details {
+  margin-top: 20px;
+}
+
+.details h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.details p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls button {
+  font-size: 24px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.controls button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.controls button:hover:before {
+  opacity: 1;
+}
+
+.controls button i {
+  color: #333333;
+  transition: transform 0.3s ease;
+}
+
+.controls button:hover i {
+  transform: scale(1.2);
+}
+
+.track-bar {
+  width: 50%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #ccc;
+  margin: 20px auto;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.track-bar .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #333;
+  transition: width 0.1s linear;
+}
+
+.time-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  width: 50%;
+  margin: 0 auto;
+}

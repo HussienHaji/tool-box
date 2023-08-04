@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="../styles/music-player.css" />
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <script src="../scripts/music-player.js" defer></script>
+  </head>
+  <body>
+    <div class="player">
+      <div class="cover">
+        <img src="path_to_cover_image.jpg" alt="Album Cover" />
+      </div>
+      <div class="details">
+        <h2 id="songName">Song Name</h2>
+        <p id="artistName">Artist Name</p>
+      </div>
+      <div class="controls">
+        <button id="previousBtn"><i class="fas fa-step-backward"></i></button>
+        <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+        <button id="nextBtn"><i class="fas fa-step-forward"></i></button>
+      </div>
+      <div class="track-bar" id="trackBar">
+        <div class="progress"></div>
+      </div>
+      <div class="time-info">
+        <span id="currentTime">0:00</span>
+        <span id="totalTime">0:00</span>
+      </div>
+    </div>
+
+    <audio id="audioPlayer" src="../assets/audio/for-future-bass-159125.mp3"></audio>
+  </body>
+</html>
